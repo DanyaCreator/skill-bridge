@@ -1,3 +1,9 @@
+import { QueryClientWrapper, RouterWrapper } from './providers';
+
 export function App() {
-  return <></>;
+  return (
+    <QueryClientWrapper>
+      <RouterWrapper />
+    </QueryClientWrapper>
+  );
 }

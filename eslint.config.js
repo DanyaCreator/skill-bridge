@@ -10,7 +10,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'vite.config.ts']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -39,6 +39,8 @@ export default defineConfig([
     },
     rules: {
       'perfectionist/sort-objects': 'off',
+      'perfectionist/sort-modules': 'off',
+      'perfectionist/sort-imports': 'off',
       'padding-line-between-statements': [
         'error',
         { blankLine: 'always', next: 'return', prev: '*' },
